@@ -12,6 +12,8 @@ A stacked CNN built with the Keras Sequential API. Convolution blocks grow from 
 
 ## Results
 
+<img src="assets/training_curves.png" width="80%" alt="Training and validation accuracy and loss" />
+
 Trained for 10 epochs.
 
 | Set | Accuracy |
@@ -21,7 +23,7 @@ Trained for 10 epochs.
 | Validation split (final epoch) | 92.34% |
 | Held out test set | 90.33% |
 
-The test set figure is the one to trust. The dataset's own val folder holds very few images, so its 62.5% score is too small a sample to read much into.
+The test set figure is the one to trust. Validation falling from 97.89% to 92.34% in the final epoch, with a test loss of 1.10, points to overfitting, so early stopping is the next thing to add. The dataset's own val folder holds very few images, so its 62.5% score is too small a sample to read much into.
 
 ## Run it
 
